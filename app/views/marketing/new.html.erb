@@ -1,11 +1,13 @@
-<form>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-
-        <div id="emailHelp" class="form-text">
-            <strong>Note:</strong> Please enter the email address by coma(,) seprated.
+<form action="<%= sent_mail_path %>" method="post" enctype="multipart/form-data">
+    <div class="card-body">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Upload CSV File<span style="color: red;">*</span></label>
+            <div class="col-sm-10">
+                <input type="file" name="csv_file" class="form-control" accept=".csv" required>
+            </div>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="card-footerrr">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
 </form>

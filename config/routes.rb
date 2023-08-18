@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "marketing#new"
+  post "/sent_mail", to: "marketing#sent_mail"
 end
